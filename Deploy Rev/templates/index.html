@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Prediksi Kepadatan Penduduk di Indonesia</title>         <!--Edit-->
+    </head>
+    <body>
+        <div id="form_container">
+            <div id="head_container">
+                <span id="title">Prediksi Kepadatan Penduduk di Indonesia</span><br>            <!--Edit-->
+            </div>
+            <form action="{{ url_for('predict')}}" method="post" id="container">
+                <div id="container1" class="container">
+                    <label for="form1">Aceh</label><br>            <!--Edit-->
+                        <input type="number" id="form1" required="required" name="var1"><br>
+                    <label for="form2">SUMATERA UTARA</label><br>
+                        <input type="number" id="form2" required="required" name="var2"><br>
+                    <label for="form3">SUMATERA BARAT</label><br>
+                        <input type="number" id="form3" required="required" name="var3"><br>
+                    <label for="form4">RIAU</label><br>
+                        <input type="number" id="form4" required="required" name="var4"><br>
+                    <label for="form5">JAMBI</label><br>
+                        <input type="number" id="form5" required="required" name="var5"><br>
+                    <label for="form6">BENGKULU</label><br>
+                        <input type="number" id="form6" required="required" name="var6"><br>
+                    <label for="form7">LAMPUNG</label><br>
+                        <input type="number" id="form7" required="required" name="var7"><br>
+                </div>
+                <div id="container2" class="container">
+                    <label for="form8">KEP. BANGKA BELITUNG</label><br>
+                        <input type="number" id="form8" required="required" name="var8"><br>
+                    <label for="form9">DKI JAKARTA</label><br>
+                        <input type="number" id="form9" required="required" name="var9"><br>
+                    <label for="form10">JAWA BARAT</label><br>
+                        <input type="number" id="form10" required="required" name="var10"><br>
+                    <label for="form11">JAWA TENGAH</label><br>
+                        <input type="number" id="form11" required="required" name="var11"><br>
+                    <label for="form12">DI YOGYAKARTA</label><br>
+                        <input type="number" id="form12" required="required" name="var12"><br>
+                    <label for="form13">JAWA TIMUR</label><br>
+                        <input type="number" id="form13" required="required" name="var13"><br>
+                    <label for="form14">BANTEN</label><br>
+                        <input type="number" id="form14" required="required" name="var14"><br>
+                </div>
+                <div id="container3" class="container">
+                    <label for="form15">JAMBI</label><br>
+                        <input type="number" id="form15" required="required" name="var15"><br>
+                    <label for="form16">NUSA TENGGARA BARAT</label><br>
+                        <input type="number" id="form16" required="required" name="var16"><br>
+                    <label for="form17">NUSA TENGGARA TIMUR</label><br>
+                        <input type="number" id="form17" required="required" name="var17"><br>
+                    <label for="form18">KALIMANTAN TENGAH</label><br>
+                        <input type="number" id="form18" required="required" name="var18"><br>
+                    <label for="form19">KALIMANTAN SELATAN</label><br>
+                        <input type="number" id="form19" required="required" name="var19"><br>
+                    <label for="form20">KALIMANTAN TIMUR</label><br>
+                        <input type="number" id="form20" required="required" name="var20"><br>
+                    <label for="form21">SULAWESI UTARA</label><br>
+                        <input type="number" id="form21" required="required" name="var21"><br>
+                </div>
+                <div id="container4" class="container">
+                    <label for="form22">SULAWESI TENGAH</label><br>
+                        <input type="number" id="form22" required="required" name="var22"><br>
+                    <label for="form23">SULAWESI SELATAN</label><br>
+                        <input type="number" id="form23" required="required" name="var23"><br>
+                    <label for="form24">SULAWESI TENGGARA</label><br>
+                        <input type="number" id="form24" required="required" name="var24"><br>
+                    <label for="form25">GORONTALO/label><br>
+                        <input type="number" id="form25" required="required" name="var25"><br>
+                    <label for="form26">MALUKU</label><br>
+                        <input type="number" id="form26" required="required" name="var26"><br>
+                    <label for="form27">MALUKU UTARA</label><br>
+                        <input type="number" id="form27" required="required" name="var27"><br>
+                    <label for="form28">PAPUA</label><br>
+                        <input type="number" id="form28" required="required" name="var28"><br>
+                </div>
+                <button type="submit" class="pred_button">Prediksi</button>
+            </form>
+        </div>
+        <div id="result_container">
+            <span id="result">{{ prediction_text }}</span>
+        </div>
+    </body>
+</html>
