@@ -3,3 +3,5 @@ gunicorn
 numpy
 joblib
 tensorflow-cpu
+sklearn
+pillow
