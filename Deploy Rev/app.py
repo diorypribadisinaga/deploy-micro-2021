@@ -8,7 +8,7 @@ model = load('model.joblib')
 def text_format(string):
     length = len(string)
     to_print = ''
-    for i in range(2, length-2):
+    for i in range(1, length-1):
         to_print += string[i]
     
     return to_print
